@@ -1,0 +1,33 @@
+-  job-template:
+     name: '{name}_job'
+     description:  'Automatically generated test'
+     project-type:  freestyle
+- scm:
+     name: '{scm-name}'
+     scm: 
+        - git:
+            url: |
+                    '{ssh-url}'
+                     refspec('+refs/pull/*:refs/remotes/origin/pr/*')
+            branches:
+              - original/master
+
+     trigger:
+      - github-pull-request:
+          cron: H/60 * * * * 
+          build-desc-template: 'build description'
+          trigger-phrase: 'retest this please'
+          githook-hooks: true
+          
+     builders:
+      -  shell: |
+          '{command}'
+          '{command1}'
+      job('example') {
+  steps {
+    shell('echo Hello World!')
+  }
+}
+     parameters:
+       - string:
+          name: Test_harrington
