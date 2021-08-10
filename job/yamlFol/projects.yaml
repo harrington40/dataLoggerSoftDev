@@ -2,9 +2,8 @@
     name: project-example
     jobs:
       - '{name}_job':
-           name:  'getspace'
+          
            command: df -h 
-      - '{name}_job':
-            name: listETC
+
             command: ls/etc
 
