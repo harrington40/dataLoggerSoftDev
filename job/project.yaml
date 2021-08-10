@@ -1,0 +1,6 @@
+- project:
+    name: test-project
+
+  job:
+    - '{name}_job'
+
