@@ -1,7 +1,7 @@
 -  job-template:
      name: '{name}_job'
      description:  'Automatically generated test'
-     project-type:  freestyle
+     project-type:  pipeline
 - scm:
      name: '{scm-name}'
      scm: 
