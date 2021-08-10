@@ -1,9 +1,0 @@
-- project:  
-    name: project-example
-    jobs:
-      - '{name}_job':
-          
-           command: df -h 
-
-            command: ls/etc
-
